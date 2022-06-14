@@ -61,7 +61,7 @@
 
                     <div class="inputBox">
                         <span>cards accepted :</span>
-                        <img src="Pictures/card_img.png" alt="">
+                        <img src="Pictures/card.png" alt="">
                     </div>
                     <div class="inputBox">
                         <span>name on card :</span>
@@ -90,7 +90,7 @@
                 </div>
 
             </div>
-            <a href="ThankYou.html">
+            <a href="thankyou.jsp">
             <button class="text-uppercase">Proceed To Checkout</button> 
             
         </a>

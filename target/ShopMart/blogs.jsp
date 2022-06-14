@@ -12,7 +12,7 @@
       <meta name="keywords" content="" />
       <meta name="description" content="" />
       <meta name="author" content="" />
-      <link rel="shortcut icon" href="Pictures/LOGONEW.jpg" type="">
+      <link rel="shortcut icon" href="images/LOGONEW.jpg" type="">
       <title>ShopMart</title>
       <!-- bootstrap core css -->
       <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
@@ -29,20 +29,20 @@
          <header class="header_section">
             <div class="container">
                <nav class="navbar navbar-expand-lg custom_nav-container ">
-                  <a class="navbar-brand" href="index.html"><img width="170" src="Pictures/LOGONEW.jpg" alt="#" /></a>
+                  <a class="navbar-brand" href="https://bpcit-shopmart.herokuapp.com"><img width="170" src="images/LOGONEW.jpg" alt="#" /></a>
                   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                   <span class=""> </span>
                   </button>
                   <div class="collapse navbar-collapse" id="navbarSupportedContent">
                      <ul class="navbar-nav">
                         <li class="nav-item">
-                           <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                           <a class="nav-link" href="https://bpcit-shopmart.herokuapp.com">Home <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
-                           <a class="nav-link" href="product.html">Products</a>
+                           <a class="nav-link" href="products.jsp">Products</a>
                         </li>
                         <li class="nav-item active">
-                           <a class="nav-link" href="blog_list.html">Blog</a>
+                           <a class="nav-link" href="blogs.jsp">Blog</a>
                         </li>
                        
                         <li class="nav-item">
@@ -291,19 +291,19 @@
                         Reach at..
                      </h4>
                      <div class="contact_link_box">
-                        <a href="">
+                        <a href="https://bpcit-shopmart.herokuapp.com">
                         <i class="fa fa-map-marker" aria-hidden="true"></i>
                         <span>
                            500 Local Road,Street 30, Kolkata
                         </span>
                         </a>
-                        <a href="">
+                        <a href="https://bpcit-shopmart.herokuapp.com">
                         <i class="fa fa-phone" aria-hidden="true"></i>
                         <span>
                         Call +01 2222 365/(+91)01 2345 6789
                         </span>
                         </a>
-                        <a href="">
+                        <a href="https://bpcit-shopmart.herokuapp.com">
                         <i class="fa fa-envelope" aria-hidden="true"></i>
                         <span>
                            shopmart.shop@gmail.com
@@ -314,21 +314,21 @@
                </div>
                <div class="col-md-4 footer-col">
                   <div class="footer_detail">
-                     <a href="index.html" class="footer-logo">
+                     <a href="https://bpcit-shopmart.herokuapp.com" class="footer-logo">
                      ShopMart
                      </a>
                      <p>
                        Only The Best Products In The World
                      </p>
                      <div class="footer_social">
-                        <a href="">
+                        <a href="https://bpcit-shopmart.herokuapp.com">
                         <i class="fa fa-facebook" aria-hidden="true"></i>
                         </a>
-                        <a href="">
+                        <a href="https://bpcit-shopmart.herokuapp.com">
                         <i class="fa fa-twitter" aria-hidden="true"></i>
                         </a>
                         
-                        <a href="">
+                        <a href="https://bpcit-shopmart.herokuapp.com">
                         <i class="fa fa-instagram" aria-hidden="true"></i>
                         </a>
                         

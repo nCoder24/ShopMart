@@ -1,1 +1,3 @@
-shopmart\LoginServlet.class
+shopmart\models\User.class
+shopmart\controllers\LoginServlet.class
+shopmart\controllers\LogoutServlet.class

@@ -46,7 +46,7 @@
                            <a class="nav-link" href="products.jsp">Products</a>
                         </li>
                         <li class="nav-item">
-                           <a class="nav-link" href="blogs.jsp">Blog</a>
+                           <a class="nav-link" href="blog_list.jsp">Blog</a>
                         </li>
                         <li class="nav-item">
                            <a class="nav-link" href="login.jsp">Login</a>
@@ -124,7 +124,7 @@
                 <br><br>
                 <h3>Man's Fashion T-shart</h3>
                 <br>
-                <p id="price">1500</p>
+                <h1 id="price">1500</h1>
                 <br>
     
                 <select id="size">
@@ -135,8 +135,9 @@
                     <option>Large</option>
                 </select>
                 <br>
-                <input id="input" type="number" value="1">
+                
                 <a href="payment.jsp"><button id="pay">Buy Now</button></a>
+                
                 <br><br><br>
                 <h3 id="h3">Product Datails</h3>
                 <br>
@@ -170,7 +171,7 @@
                                  <h3>Menu</h3>
                                  <ul>
                                     <li><a href="index.jsp">Home</a></li>
-                                    <li><a href="blogs.jsp">Blog</a></li>
+                                    <li><a href="blog_list.jsp">Blog</a></li>
                                  </ul>
                               </div>
                            </div>
