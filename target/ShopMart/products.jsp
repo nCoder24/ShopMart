@@ -12,7 +12,11 @@
       <meta name="keywords" content="" />
       <meta name="description" content="" />
       <meta name="author" content="" />
+<<<<<<< HEAD:target/ShopMart/products.jsp
       <link rel="shortcut icon" href="images/logo.jpg" type="">
+=======
+      <link rel="shortcut icon" href="images/LOGONEW.jpg" type="">
+>>>>>>> development:target/ShopMart/product.jsp
       <title>ShopMart</title>
       <!-- bootstrap core css -->
       <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
@@ -29,7 +33,11 @@
          <header class="header_section">
             <div class="container">
                <nav class="navbar navbar-expand-lg custom_nav-container ">
+<<<<<<< HEAD:target/ShopMart/products.jsp
                   <a class="navbar-brand" href="https://bpcit-shopmart.herokuapp.com"><img width="170" src="images/logo.jpg" alt="#" /></a>
+=======
+                  <a class="navbar-brand" href="https://bpcit-shopmart.herokuapp.com"><img width="170" src="images/LOGONEW.jpg" alt="#" /></a>
+>>>>>>> development:target/ShopMart/product.jsp
                   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                   <span class=""> </span>
                   </button>
@@ -110,11 +118,17 @@
                   <div class="box">
                      <div class="option_container">
                         <div class="options">
+<<<<<<< HEAD:target/ShopMart/products.jsp
                            <a href="view-product.jsp" class="option2">
                               view
                            </a>
                            <a href="payment.jsp" class="option2">
                               Buy Now
+=======
+                           
+                           <a href="payment.jsp" class="option2">
+                           Buy Now
+>>>>>>> development:target/ShopMart/product.jsp
                            </a>
                         </div>
                      </div>
