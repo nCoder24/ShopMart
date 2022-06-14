@@ -1,8 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8" import="shopmart.models.User"%>
 <!DOCTYPE html>
 <html>
-
 <head>
    <!-- Basic -->
    <meta charset="utf-8" />
@@ -26,6 +25,8 @@
 </head>
 
 <body>
+
+   <%User user = (User)session.getAttribute("user");%>
    <div class="hero_area">
       <!-- header section strats -->
       <header class="header_section">
@@ -48,7 +49,11 @@
                         <a class="nav-link" href="blogs.jsp">Blog</a>
                      </li>
                      <li class="nav-item">
-                        <a class="nav-link" href="login.jsp">Login</a>
+                     <% 
+                     	if (user == null)
+                     		out.print("<a class='nav-link' href='login.jsp'>Login</a>"); 
+                     	else out.print("<a class='nav-link' href='Logout'>Logout</a>");
+                     %>
                      </li>
                      <li class="nav-item">
                         <a class="nav-link" href="#">
@@ -59,7 +64,7 @@
                                  <g>
                                     <path
                                        d="M345.6,338.862c-29.184,0-53.248,23.552-53.248,53.248c0,29.184,23.552,53.248,53.248,53.248
-                                          c29.184,0,53.248-23.552,53.248-53.248C398.336,362.926,374.784,338.862,345.6,338.862z" />
+                                          c29.184,0,53.248-23.552,53.248-53.248C398.336,362.926,374.784,338.862,345.6,338.862z" >
                                  </g>
                               </g>
                               <g>
@@ -94,7 +99,14 @@
          </div>
       </header>
       <!-- end header section -->
-
+		<div class="heading_container heading_center">
+	       <h2>
+		       <%
+		       		if(user == null) out.println("Welcome!");
+		       		else out.println("Welcome back, "+user.getName()+"!");
+				%>
+	       </h2>
+	    </div>
       <!-- slider section -->
       <section class="slider_section ">
          <div class="slider_bg_box">

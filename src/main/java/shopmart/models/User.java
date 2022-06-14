@@ -1,15 +1,22 @@
 package shopmart.models;
 
 public class User {
-	private int userID;
+	private String email;
 	private String name;
 	private String password;
 	
-	public int getUserID() {
-		return userID;
+	public User(String email, String name, String password) {
+		super();
+		this.email = email;
+		this.name = name;
+		this.password = password;
 	}
-	public void setUserID(int userID) {
-		this.userID = userID;
+	
+	public String getEmail() {
+		return email;
+	}
+	public void setUserID(String email) {
+		this.email = email;
 	}
 	public String getName() {
 		return name;
@@ -17,14 +24,14 @@ public class User {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public String getPassword() {
-		return password;
-	}
 	public void setPassword(String password) {
 		this.password = password;
 	}
+	public boolean validate(String pass) {
+		return (pass.equals(password));
+	}
 	@Override
 	public String toString() {
-		return "User [userID=" + userID + ", name=" + name + "]";
+		return "User [email=" + email + ", name=" + name + "]";
 	}
 }
