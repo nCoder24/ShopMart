@@ -8,19 +8,18 @@
 	<title> Sign in | up Form </title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
 	<link rel="stylesheet" href="css\style1.css">
-
 </head>
 
 <body>
 	<!-----------Create Account------------->
 	<div class="container" id="container">
 		<div class="form-container sign-up-container">
-			<form action="#">
+			<form action="signup">
 				<h1>Create Account</h1>
 				<br>
-				<input type="text" placeholder="Name" />
-				<input type="email" placeholder="Email" />
-				<input type="password" placeholder="Password" />
+				<input type="text" placeholder="Name" name="name" />
+				<input type="email" placeholder="Email" name="email" />
+				<input type="password" placeholder="Password" name="password" />
 				<button>Sign Up</button>
 			</form>
 		</div>
@@ -28,13 +27,13 @@
 
 		<!---------------Sign In----------------->
 		<div class="form-container sign-in-container">
-			<form action="LoginServlet">
+			<form action="login">
 				<h1>Sign in</h1>
 				<br>
 				<input type="email" placeholder="Email" name="email" />
 				<input type="password" placeholder="Password" name = "password" />
 				<a href="#">Forgot your password?</a>
-				<button>Sign In</button>
+				<button>Login</button>
 			</form>
 		</div>
 		<div class="overlay-container">
@@ -52,5 +51,6 @@
 			</div>
 		</div>
 	</div>
+	<script src="js/script.js"></script>
 </body>
 </html>
