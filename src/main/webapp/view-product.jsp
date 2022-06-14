@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8" import="shopmart.models.Product" %>
     <!DOCTYPE html>
     <html>
         <head>
@@ -27,7 +27,8 @@
         </head>
         
         <body>
-            <!--hadder-->
+      	  <%Product product = (Product)request.getAttribute("product");%>
+          <!--hadder-->
           <!-- header section strats -->
           <header class="header_section">
             <div class="container">
@@ -49,8 +50,12 @@
                            <a class="nav-link" href="blogs.jsp">Blog</a>
                         </li>
                         <li class="nav-item">
-                           <a class="nav-link" href="login.jsp">Login</a>
-                        </li>
+	                     <% 
+	                     	if (session.getAttribute("user") == null)
+	                     		out.print("<a class='nav-link' href='login.jsp'>Login</a>"); 
+	                     	else out.print("<a class='nav-link' href='logout'>Logout</a>");
+	                     %>
+	                     </li>
                         <li class="nav-item">
                            <a class="nav-link" href="#">
                               <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
@@ -99,7 +104,7 @@
     
             <section id="prodetails" class="section-p1">
                 <div class="single-pro-image">
-                        <img src="images/products/101.jpeg" width="100%" id="MainImg">
+                        <img src="images/products/<%=product.getProductID()%>.jpeg" width="100%" id="MainImg">
                     
     
                 <div class="small-img-group">
@@ -120,11 +125,11 @@
             
             <div class="single-pro-details">
                 <br>
-                <h4>T-shart</h4>
+                <h4><%=product.getType()%></h4>
                 <br><br>
-                <h3>Man's Fashion T-shart</h3>
+                <h3><%=product.getTitle()%></h3>
                 <br>
-                <p id="price">1500</p>
+                <p id="price">Rs. <%=product.getPrice()%></p>
                 <br>
     
                 <select id="size">
@@ -138,10 +143,10 @@
                 <input id="input" type="number" value="1">
                 <a href="payment.jsp"><button id="pay">Buy Now</button></a>
                 <br><br><br>
-                <h3 id="h3">Product Datails</h3>
+                <h3 id="h3">Product Details</h3>
                 <br>
                 <span>
-                    Shop from wide range of Round Neck half sleeve T-Shirt from BLIVE. Pair this t -shirt with jeans or chinos, trousers and get an awesome look. It is regular machine wash. This fabric is soft in touch and it makes feel so comfort when you wear. The fabric does not pill and the color will not fade easily. Available in various color and designs for your every day fashion. Fill your wardrobe with the most wanted brand in online world and be stylish most beautiful collections from the house of BLIVE.
+                    <%=product.getDescription()%>
                 </span>
             </div>
          </section>

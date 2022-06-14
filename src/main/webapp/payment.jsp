@@ -17,7 +17,7 @@
 	<%
 	User user = (User)session.getAttribute("user");
 	if(session.getAttribute("user") == null) {
-		request.setAttribute("msg", "You are not logged in");
+		request.setAttribute("msg", "Sorry! You are not logged in.");
 		//request.setAttribute("requestPath", request.getContextPath());
 		request.getRequestDispatcher("login.jsp").forward(request, response);
 	}

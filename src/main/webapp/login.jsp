@@ -19,12 +19,12 @@
 	<!-----------Create Account------------->
 	<div class="container" id="container">
 		<div class="form-container sign-up-container">
-			<form action="SignUp">
+			<form action="signup">
 				<h1>Create Account</h1>
 				<br>
-				<input type="text" placeholder="Name" />
-				<input type="email" placeholder="Email" />
-				<input type="password" placeholder="Password" />
+				<input type="text" placeholder="Name" name="name" />
+				<input type="email" placeholder="Email" name="email"/>
+				<input type="password" placeholder="Password" name="password"/>
 				<button>Sign Up</button>
 			</form>
 		</div>
@@ -32,7 +32,7 @@
 
 		<!---------------Sign In----------------->
 		<div class="form-container sign-in-container">
-			<form action="Login" method="post">
+			<form action="login">
 				<h1>Sign in</h1>
 				<br>
 				<input type="email" placeholder="Email" name="email" />

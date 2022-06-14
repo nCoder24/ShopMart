@@ -52,7 +52,7 @@
                      <% 
                      	if (user == null)
                      		out.print("<a class='nav-link' href='login.jsp'>Login</a>"); 
-                     	else out.print("<a class='nav-link' href='Logout'>Logout</a>");
+                     	else out.print("<a class='nav-link' href='logout'>Logout</a>");
                      %>
                      </li>
                      <li class="nav-item">
@@ -374,17 +374,21 @@
             </h2>
          </div>
          <div class="row">
+         	<%for (int i = 101; i <=103; i++) { %>
             <div class="col-sm-6 col-md-4 col-lg-4">
                <div class="box">
                   <div class="option_container">
                      <div class="options">
+                     	<a href="product?pid=<%=i%>" class="option2">
+                              view
+                        </a>
                         <a href="payment.jsp" class="option2">
                            Buy Now
                         </a>
                      </div>
                   </div>
                   <div class="img-box">
-                     <img src="images/products/101.jpeg" alt="">
+                     <img src="images/products/<%=i%>.jpeg" alt="">
                   </div>
                   <div class="detail-box">
                      <h5>
@@ -396,64 +400,22 @@
                   </div>
                </div>
             </div>
-            <div class="col-sm-6 col-md-4 col-lg-4">
+            <% } %>
+            <%for (int i = 201; i <=203; i++) { %>
+			<div class="col-sm-6 col-md-4 col-lg-4">
                <div class="box">
                   <div class="option_container">
                      <div class="options">
-                        
+                        <a href="product?pid=<%=i%>" class="option2">
+                              view
+                           </a>
                         <a href="payment.jsp" class="option2">
                            Buy Now
                         </a>
                      </div>
                   </div>
                   <div class="img-box">
-                     <img src="images/products/102.jpeg" alt="">
-                  </div>
-                  <div class="detail-box">
-                     <h5>
-                        Men's Shirt
-                     </h5>
-                     <h6>
-                        RS. 800
-                     </h6>
-                  </div>
-               </div>
-            </div>
-            <div class="col-sm-6 col-md-4 col-lg-4">
-               <div class="box">
-                  <div class="option_container">
-                     <div class="options">
-                        
-                        <a href="payment.jsp" class="option2">
-                           Buy Now
-                        </a>
-                     </div>
-                  </div>
-                  <div class="img-box">
-                     <img src="images/products/103.jpeg" alt="">
-                  </div>
-                  <div class="detail-box">
-                     <h5>
-                        Men's T-Shirt
-                     </h5>
-                     <h6>
-                        RS. 500
-                     </h6>
-                  </div>
-               </div>
-            </div>
-            <div class="col-sm-6 col-md-4 col-lg-4">
-               <div class="box">
-                  <div class="option_container">
-                     <div class="options">
-                        
-                        <a href="payment.jsp" class="option2">
-                           Buy Now
-                        </a>
-                     </div>
-                  </div>
-                  <div class="img-box">
-                     <img src="images/products/201.jpeg" alt="">
+                     <img src="images/products/<%=i%>.jpeg" alt="">
                   </div>
                   <div class="detail-box">
                      <h5>
@@ -465,87 +427,22 @@
                   </div>
                </div>
             </div>
+            <% } %>
+            <%for (int i = 301; i <=303; i++) { %>
             <div class="col-sm-6 col-md-4 col-lg-4">
                <div class="box">
                   <div class="option_container">
                      <div class="options">
-                        
+                       <a href="product?pid=<%=i%>" class="option2">
+                              view
+                           </a>
                         <a href="payment.jsp" class="option2">
                            Buy Now
                         </a>
                      </div>
                   </div>
                   <div class="img-box">
-                     <img src="images/products/202.jpeg" alt="">
-                  </div>
-                  <div class="detail-box">
-                     <h5>
-                        Women's Dress
-                     </h5>
-                     <h6>
-                        RS. 1500
-                     </h6>
-                  </div>
-               </div>
-            </div>
-            <div class="col-sm-6 col-md-4 col-lg-4">
-               <div class="box">
-                  <div class="option_container">
-                     <div class="options">
-                        
-                        <a href="payment.jsp" class="option2">
-                           Buy Now
-                        </a>
-                     </div>
-                  </div>
-                  <div class="img-box">
-                     <img src="images/products/203.jpeg" alt="">
-                  </div>
-                  <div class="detail-box">
-                     <h5>
-                        Women's Dress
-                     </h5>
-                     <h6>
-                        RS. 900
-                     </h6>
-                  </div>
-               </div>
-            </div>
-            <div class="col-sm-6 col-md-4 col-lg-4">
-               <div class="box">
-                  <div class="option_container">
-                     <div class="options">
-                        
-                        <a href="payment.jsp" class="option2">
-                           Buy Now
-                        </a>
-                     </div>
-                  </div>
-                  <div class="img-box">
-                     <img src="images/products/301.jpeg" alt="">
-                  </div>
-                  <div class="detail-box">
-                     <h5>
-                        Kid's Dress
-                     </h5>
-                     <h6>
-                        RS. 400
-                     </h6>
-                  </div>
-               </div>
-            </div>
-            <div class="col-sm-6 col-md-4 col-lg-4">
-               <div class="box">
-                  <div class="option_container">
-                     <div class="options">
-                       
-                        <a href="payment.jsp" class="option2">
-                           Buy Now
-                        </a>
-                     </div>
-                  </div>
-                  <div class="img-box">
-                     <img src="images/products/302.jpeg" alt="">
+                     <img src="images/products/<%=i%>.jpeg" alt="">
                   </div>
                   <div class="detail-box">
                      <h5>
@@ -557,29 +454,7 @@
                   </div>
                </div>
             </div>
-            <div class="col-sm-6 col-md-4 col-lg-4">
-               <div class="box">
-                  <div class="option_container">
-                     <div class="options">
-                        
-                        <a href="payment.jsp" class="option2">
-                           Buy Now
-                        </a>
-                     </div>
-                  </div>
-                  <div class="img-box">
-                     <img src="images/products/303.jpeg" alt="">
-                  </div>
-                  <div class="detail-box">
-                     <h5>
-                        Kid's Dress
-                     </h5>
-                     <h6>
-                        RS. 900
-                     </h6>
-                  </div>
-               </div>
-            </div>
+            <% } %>
       </div>
    </section>
    <!-- end product section -->
