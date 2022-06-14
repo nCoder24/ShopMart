@@ -13,7 +13,7 @@
    <meta name="keywords" content="" />
    <meta name="description" content="" />
    <meta name="author" content="" />
-   <link rel="shortcut icon" href="images/LOGONEW.jpg" type="">
+   <link rel="shortcut icon" href="images/logo.jpg" type="">
    <title>ShopMart</title>
    <!-- bootstrap core css -->
    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
@@ -31,7 +31,7 @@
       <header class="header_section">
          <div class="container">
             <nav class="navbar navbar-expand-lg custom_nav-container ">
-               <a class="navbar-brand" href="https://bpcit-shopmart.herokuapp.com"><img width="170" src="images/LOGONEW.jpg" alt="#" /></a>
+               <a class="navbar-brand" href="https://bpcit-shopmart.herokuapp.com"><img width="170" src="images/logo.jpg" alt="#" /></a>
                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                   aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                   <span class=""> </span>
@@ -98,7 +98,7 @@
       <!-- slider section -->
       <section class="slider_section ">
          <div class="slider_bg_box">
-            <img src="images/Banner.jpeg" alt="">
+            <img src="images/banner.jpeg" alt="">
          </div>
          <div id="customCarousel1" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
@@ -330,7 +330,7 @@
       <div class="container">
          <div class="box">
             <div class="arrival_bg_box">
-               <img src="images/cover2.jpeg" alt="">
+               <img src="images/cover.jpeg" alt="">
             </div>
             <div class="row">
                <div class="col-md-6 ml-auto">
@@ -578,7 +578,7 @@
             <div class="col-md-4">
                <div class="full">
                   <div class="logo_footer">
-                     <a href="#"><img width="170" src="images/LOGONEW.jpg" alt="#" /></a>
+                     <a href="#"><img width="170" src="images/logo.jpg" alt="#" /></a>
                   </div>
                   <div class="information_f">
                      <p><strong>ADDRESS:</strong> 500 Local Road,Street 30, Kolkata</p>
@@ -628,7 +628,5 @@
       </div>
    </footer>
    <!-- footer end -->
-
 </body>
-
 </html>

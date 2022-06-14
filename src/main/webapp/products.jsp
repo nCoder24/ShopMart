@@ -12,7 +12,7 @@
       <meta name="keywords" content="" />
       <meta name="description" content="" />
       <meta name="author" content="" />
-      <link rel="shortcut icon" href="images/LOGONEW.jpg" type="">
+      <link rel="shortcut icon" href="images/logo.jpg" type="">
       <title>ShopMart</title>
       <!-- bootstrap core css -->
       <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
@@ -29,7 +29,7 @@
          <header class="header_section">
             <div class="container">
                <nav class="navbar navbar-expand-lg custom_nav-container ">
-                  <a class="navbar-brand" href="https://bpcit-shopmart.herokuapp.com"><img width="170" src="images/LOGONEW.jpg" alt="#" /></a>
+                  <a class="navbar-brand" href="https://bpcit-shopmart.herokuapp.com"><img width="170" src="images/logo.jpg" alt="#" /></a>
                   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                   <span class=""> </span>
                   </button>
@@ -110,9 +110,11 @@
                   <div class="box">
                      <div class="option_container">
                         <div class="options">
-                           
+                           <a href="view-product.jsp" class="option2">
+                              view
+                           </a>
                            <a href="payment.jsp" class="option2">
-                           Buy Now
+                              Buy Now
                            </a>
                         </div>
                      </div>
