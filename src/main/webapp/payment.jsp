@@ -90,7 +90,7 @@
                 </div>
 
             </div>
-            <a href="ThankYou.html">
+            <a href="thankyou.jsp">
             <button class="text-uppercase">Proceed To Checkout</button> 
             
         </a>

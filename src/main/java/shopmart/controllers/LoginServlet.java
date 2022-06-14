@@ -1,4 +1,4 @@
-package shopmart;
+package shopmart.controllers;
 
 import java.io.IOException;
 

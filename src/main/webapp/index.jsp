@@ -13,7 +13,7 @@
    <meta name="keywords" content="" />
    <meta name="description" content="" />
    <meta name="author" content="" />
-   <link rel="shortcut icon" href="Pictures/LOGONEW.jpg" type="">
+   <link rel="shortcut icon" href="images/LOGONEW.jpg" type="">
    <title>ShopMart</title>
    <!-- bootstrap core css -->
    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
@@ -31,7 +31,7 @@
       <header class="header_section">
          <div class="container">
             <nav class="navbar navbar-expand-lg custom_nav-container ">
-               <a class="navbar-brand" href="index.html"><img width="170" src="Pictures/LOGONEW.jpg" alt="#" /></a>
+               <a class="navbar-brand" href="https://bpcit-shopmart.herokuapp.com"><img width="170" src="images/LOGONEW.jpg" alt="#" /></a>
                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                   aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                   <span class=""> </span>
@@ -39,13 +39,13 @@
                <div class="collapse navbar-collapse" id="navbarSupportedContent">
                   <ul class="navbar-nav">
                      <li class="nav-item active">
-                        <a class="nav-link" href="">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="https://bpcit-shopmart.herokuapp.com">Home <span class="sr-only">(current)</span></a>
                      </li>
                      <li class="nav-item">
-                        <a class="nav-link" href="product.html">Products</a>
+                        <a class="nav-link" href="products.jsp">Products</a>
                      </li>
                      <li class="nav-item">
-                        <a class="nav-link" href="blog_list.html">Blog</a>
+                        <a class="nav-link" href="blogs.jsp">Blog</a>
                      </li>
                      <li class="nav-item">
                         <a class="nav-link" href="login.jsp">Login</a>
@@ -98,7 +98,7 @@
       <!-- slider section -->
       <section class="slider_section ">
          <div class="slider_bg_box">
-            <img src="Pictures/Banner.jpeg" alt="">
+            <img src="images/Banner.jpeg" alt="">
          </div>
          <div id="customCarousel1" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
@@ -116,7 +116,7 @@
                               </h1>
                               <br>
                               <div class="">
-                                 <a href="product.html" class="btn1">
+                                 <a href="products.jsp" class="btn1">
                                     Shop Now
                                  </a>
                               </div>
@@ -330,7 +330,7 @@
       <div class="container">
          <div class="box">
             <div class="arrival_bg_box">
-               <img src="Pictures/cover2.jpeg" alt="">
+               <img src="images/cover2.jpeg" alt="">
             </div>
             <div class="row">
                <div class="col-md-6 ml-auto">
@@ -366,13 +366,13 @@
                <div class="box">
                   <div class="option_container">
                      <div class="options">
-                        <a href="payment.html" class="option2">
+                        <a href="payment.jsp" class="option2">
                            Buy Now
                         </a>
                      </div>
                   </div>
                   <div class="img-box">
-                     <img src="Pictures/mens shirt.jpeg" alt="">
+                     <img src="images/products/101.jpeg" alt="">
                   </div>
                   <div class="detail-box">
                      <h5>
@@ -389,13 +389,13 @@
                   <div class="option_container">
                      <div class="options">
                         
-                        <a href="payment.html" class="option2">
+                        <a href="payment.jsp" class="option2">
                            Buy Now
                         </a>
                      </div>
                   </div>
                   <div class="img-box">
-                     <img src="Pictures/mens 2.jpeg" alt="">
+                     <img src="images/products/102.jpeg" alt="">
                   </div>
                   <div class="detail-box">
                      <h5>
@@ -412,13 +412,13 @@
                   <div class="option_container">
                      <div class="options">
                         
-                        <a href="payment.html" class="option2">
+                        <a href="payment.jsp" class="option2">
                            Buy Now
                         </a>
                      </div>
                   </div>
                   <div class="img-box">
-                     <img src="Pictures/mens_tshirt.jpeg" alt="">
+                     <img src="images/products/103.jpeg" alt="">
                   </div>
                   <div class="detail-box">
                      <h5>
@@ -435,13 +435,13 @@
                   <div class="option_container">
                      <div class="options">
                         
-                        <a href="payment.html" class="option2">
+                        <a href="payment.jsp" class="option2">
                            Buy Now
                         </a>
                      </div>
                   </div>
                   <div class="img-box">
-                     <img src="Pictures/womens3.jpeg" alt="">
+                     <img src="images/products/201.jpeg" alt="">
                   </div>
                   <div class="detail-box">
                      <h5>
@@ -458,13 +458,13 @@
                   <div class="option_container">
                      <div class="options">
                         
-                        <a href="payment.html" class="option2">
+                        <a href="payment.jsp" class="option2">
                            Buy Now
                         </a>
                      </div>
                   </div>
                   <div class="img-box">
-                     <img src="Pictures/women5.jpeg" alt="">
+                     <img src="images/products/202.jpeg" alt="">
                   </div>
                   <div class="detail-box">
                      <h5>
@@ -481,13 +481,13 @@
                   <div class="option_container">
                      <div class="options">
                         
-                        <a href="payment.html" class="option2">
+                        <a href="payment.jsp" class="option2">
                            Buy Now
                         </a>
                      </div>
                   </div>
                   <div class="img-box">
-                     <img src="Pictures/women6.jpeg" alt="">
+                     <img src="images/products/203.jpeg" alt="">
                   </div>
                   <div class="detail-box">
                      <h5>
@@ -504,13 +504,13 @@
                   <div class="option_container">
                      <div class="options">
                         
-                        <a href="payment.html" class="option2">
+                        <a href="payment.jsp" class="option2">
                            Buy Now
                         </a>
                      </div>
                   </div>
                   <div class="img-box">
-                     <img src="Pictures/Kids1.jpeg" alt="">
+                     <img src="images/products/301.jpeg" alt="">
                   </div>
                   <div class="detail-box">
                      <h5>
@@ -527,13 +527,13 @@
                   <div class="option_container">
                      <div class="options">
                        
-                        <a href="payment.html" class="option2">
+                        <a href="payment.jsp" class="option2">
                            Buy Now
                         </a>
                      </div>
                   </div>
                   <div class="img-box">
-                     <img src="Pictures/kids2.jpeg" alt="">
+                     <img src="images/products/302.jpeg" alt="">
                   </div>
                   <div class="detail-box">
                      <h5>
@@ -550,13 +550,13 @@
                   <div class="option_container">
                      <div class="options">
                         
-                        <a href="payment.html" class="option2">
+                        <a href="payment.jsp" class="option2">
                            Buy Now
                         </a>
                      </div>
                   </div>
                   <div class="img-box">
-                     <img src="Pictures/kids3.jpeg" alt="">
+                     <img src="images/products/303.jpeg" alt="">
                   </div>
                   <div class="detail-box">
                      <h5>
@@ -578,7 +578,7 @@
             <div class="col-md-4">
                <div class="full">
                   <div class="logo_footer">
-                     <a href="#"><img width="170" src="Pictures/LOGONEW.jpg" alt="#" /></a>
+                     <a href="#"><img width="170" src="images/LOGONEW.jpg" alt="#" /></a>
                   </div>
                   <div class="information_f">
                      <p><strong>ADDRESS:</strong> 500 Local Road,Street 30, Kolkata</p>
@@ -595,8 +595,8 @@
                            <div class="widget_menu">
                               <h3>Menu</h3>
                               <ul>
-                                 <li><a href="index.html">Home</a></li>
-                                 <li><a href="blog_list.html">Blog</a></li>
+                                 <li><a href="https://bpcit-shopmart.herokuapp.com">Home</a></li>
+                                 <li><a href="blogs.jsp">Blog</a></li>
                               </ul>
                            </div>
                         </div>
@@ -605,8 +605,8 @@
                               <h3>Account</h3>
                               <ul>
                                  
-                                 <li><a href="login.html">Login</a></li>
-                                 <li><a href="product.html">Shopping</a></li>
+                                 <li><a href="login.jsp">Login</a></li>
+                                 <li><a href="products.jsp">Shopping</a></li>
                                  
                               </ul>
                            </div>

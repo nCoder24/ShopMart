@@ -12,7 +12,7 @@
       <meta name="keywords" content="" />
       <meta name="description" content="" />
       <meta name="author" content="" />
-      <link rel="shortcut icon" href="Pictures/LOGONEW.jpg" type="">
+      <link rel="shortcut icon" href="images/LOGONEW.jpg" type="">
       <title>ShopMart</title>
       <!-- bootstrap core css -->
       <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
@@ -29,21 +29,21 @@
          <header class="header_section">
             <div class="container">
                <nav class="navbar navbar-expand-lg custom_nav-container ">
-                  <a class="navbar-brand" href="index.html"><img width="170" src="Pictures/LOGONEW.jpg" alt="#" /></a>
+                  <a class="navbar-brand" href="https://bpcit-shopmart.herokuapp.com"><img width="170" src="images/LOGONEW.jpg" alt="#" /></a>
                   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                   <span class=""> </span>
                   </button>
                   <div class="collapse navbar-collapse" id="navbarSupportedContent">
                      <ul class="navbar-nav">
                         <li class="nav-item">
-                           <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                           <a class="nav-link" href="https://bpcit-shopmart.herokuapp.com">Home <span class="sr-only">(current)</span></a>
                         </li>
                         
                         <li class="nav-item active">
-                           <a class="nav-link" href="product.html">Products</a>
+                           <a class="nav-link" href="products.jsp">Products</a>
                         </li>
                         <li class="nav-item">
-                           <a class="nav-link" href="blog_list.html">Blog</a>
+                           <a class="nav-link" href="blogs.jsp">Blog</a>
                         </li>
                         <li class="nav-item">
                            <a class="nav-link" href="#">
@@ -111,13 +111,13 @@
                      <div class="option_container">
                         <div class="options">
                            
-                           <a href="payment.html" class="option2">
+                           <a href="payment.jsp" class="option2">
                            Buy Now
                            </a>
                         </div>
                      </div>
                      <div class="img-box">
-                        <img src="Pictures/NewM1.jpeg" alt="">
+                        <img src="images/products/104.jpeg" alt="">
                      </div>
                      <div class="detail-box">
                         <h5>
@@ -134,13 +134,13 @@
                      <div class="option_container">
                         <div class="options">
                            
-                           <a href="payment.html" class="option2">
+                           <a href="payment.jsp" class="option2">
                            Buy Now
                            </a>
                         </div>
                      </div>
                      <div class="img-box">
-                        <img src="Pictures/NewM2.jpeg" alt="">
+                        <img src="images/products/105.jpeg" alt="">
                      </div>
                      <div class="detail-box">
                         <h5>
@@ -157,13 +157,13 @@
                      <div class="option_container">
                         <div class="options">
                            
-                           <a href="payment.html" class="option2">
+                           <a href="payment.jsp" class="option2">
                            Buy Now
                            </a>
                         </div>
                      </div>
                      <div class="img-box">
-                        <img src="Pictures/NewM3.jpeg" alt="">
+                        <img src="images/products/106.jpeg" alt="">
                      </div>
                      <div class="detail-box">
                         <h5>
@@ -180,13 +180,13 @@
                      <div class="option_container">
                         <div class="options">
                            
-                           <a href="payment.html" class="option2">
+                           <a href="payment.jsp" class="option2">
                            Buy Now
                            </a>
                         </div>
                      </div>
                      <div class="img-box">
-                        <img src="Pictures/NewM4.jpeg" alt="">
+                        <img src="images/products/107.jpeg" alt="">
                      </div>
                      <div class="detail-box">
                         <h5>
@@ -203,13 +203,13 @@
                      <div class="option_container">
                         <div class="options">
                            
-                           <a href="payment.html" class="option2">
+                           <a href="payment.jsp" class="option2">
                            Buy Now
                            </a>
                         </div>
                      </div>
                      <div class="img-box">
-                        <img src="Pictures/NewF1.jpeg" alt="">
+                        <img src="images/products/204.jpeg" alt="">
                      </div>
                      <div class="detail-box">
                         <h5>
@@ -226,13 +226,13 @@
                      <div class="option_container">
                         <div class="options">
                            
-                           <a href="payment.html" class="option2">
+                           <a href="payment.jsp" class="option2">
                            Buy Now
                            </a>
                         </div>
                      </div>
                      <div class="img-box">
-                        <img src="Pictures/NewF2.jpeg" alt="">
+                        <img src="images/products/205.jpeg" alt="">
                      </div>
                      <div class="detail-box">
                         <h5>
@@ -249,13 +249,13 @@
                      <div class="option_container">
                         <div class="options">
                            
-                           <a href="payment.html" class="option2">
+                           <a href="payment.jsp" class="option2">
                            Buy Now
                            </a>
                         </div>
                      </div>
                      <div class="img-box">
-                        <img src="Pictures/NewF3.jpeg" alt="">
+                        <img src="images/proudects/206.jpeg" alt="">
                      </div>
                      <div class="detail-box">
                         <h5>
@@ -272,13 +272,13 @@
                      <div class="option_container">
                         <div class="options">
                            
-                           <a href="payment.html" class="option2">
+                           <a href="payment.jsp" class="option2">
                            Buy Now
                            </a>
                         </div>
                      </div>
                      <div class="img-box">
-                        <img src="Pictures/NewF4.jpeg" alt="">
+                        <img src="images/products/207.jpeg" alt="">
                      </div>
                      <div class="detail-box">
                         <h5>
@@ -295,13 +295,13 @@
                      <div class="option_container">
                         <div class="options">
                            
-                           <a href="payment.html" class="option2">
+                           <a href="payment.jsp" class="option2">
                            Buy Now
                            </a>
                         </div>
                      </div>
                      <div class="img-box">
-                        <img src="Pictures/NewK1.jpeg" alt="">
+                        <img src="images/products/304.jpeg" alt="">
                      </div>
                      <div class="detail-box">
                         <h5>
@@ -318,13 +318,13 @@
                      <div class="option_container">
                         <div class="options">
                            
-                           <a href="payment.html" class="option2">
+                           <a href="payment.jsp" class="option2">
                            Buy Now
                            </a>
                         </div>
                      </div>
                      <div class="img-box">
-                        <img src="Pictures/NewK2.jpeg" alt="">
+                        <img src="images/products/305.jpeg" alt="">
                      </div>
                      <div class="detail-box">
                         <h5>
@@ -341,13 +341,13 @@
                      <div class="option_container">
                         <div class="options">
                           
-                           <a href="payment.html" class="option2">
+                           <a href="payment.jsp" class="option2">
                            Buy Now
                            </a>
                         </div>
                      </div>
                      <div class="img-box">
-                        <img src="Pictures/NewK3.jpeg" alt="">
+                        <img src="images/products/306.jpeg" alt="">
                      </div>
                      <div class="detail-box">
                         <h5>
@@ -364,13 +364,13 @@
                      <div class="option_container">
                         <div class="options">
                            
-                           <a href="payment.html" class="option2">
+                           <a href="payment.jsp" class="option2">
                            Buy Now
                            </a>
                         </div>
                      </div>
                      <div class="img-box">
-                        <img src="Pictures/NewK4.jpeg" alt="">
+                        <img src="images/products/307.jpeg" alt="">
                      </div>
                      <div class="detail-box">
                         <h5>
