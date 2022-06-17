@@ -22,17 +22,18 @@ public class LoginServlet extends HttpServlet {
 		
 		User user = dao.getUser(email);
 		if (user == null) {
-			user = new User("email", "name", "password");
-			session.setAttribute("user", user);
-			response.sendRedirect("index.jsp");
-			System.out.println("Database Error");
+			response.getWriter().println("Sorry! Internal Error Occored");
+		}
+		else if (user.getEmail().equals("")){
+			request.setAttribute("msg", "Looks like you are not registered! Please try again by signing up yourself");
+			request.getRequestDispatcher("login.jsp").forward(request, response);
 		}
 		else if (user.validate(pass)) {
 			session.setAttribute("user", user);
 			response.sendRedirect("index.jsp");
 		}
 		else {
-			request.setAttribute("msg", "Email or password error! Please try again.");
+			request.setAttribute("msg", "Email or password error! Please try again");
 			request.getRequestDispatcher("login.jsp").forward(request, response);
 		}
 	}

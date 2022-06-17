@@ -5,6 +5,11 @@ public class User {
 	private String name;
 	private String password;
 	
+	public User() {
+		email = "";
+		name = "";
+		password = "";
+	}
 	public User(String email, String name, String password) {
 		super();
 		this.email = email;
@@ -15,7 +20,7 @@ public class User {
 	public String getEmail() {
 		return email;
 	}
-	public void setUserID(String email) {
+	public void setEmail(String email) {
 		this.email = email;
 	}
 	public String getName() {
@@ -23,6 +28,9 @@ public class User {
 	}
 	public void setName(String name) {
 		this.name = name;
+	}
+	public String getPassword() {
+		return password;
 	}
 	public void setPassword(String password) {
 		this.password = password;

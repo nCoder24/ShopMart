@@ -12,10 +12,18 @@ import shopmart.models.User;
 public class SignUpServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		User user = new User(request.getParameter("email"), request.getParameter("name"), request.getParameter("password"));
+		
 		UserDao dao = new UserDao();
-		User user = dao.newUser(request.getParameter("email"), request.getParameter("name"), request.getParameter("password"));
-		request.getSession().setAttribute("user", user);
-		response.sendRedirect("index.jsp");
+		boolean registered = dao.registerUser(user);
+		
+		if (registered) {
+			request.getSession().setAttribute("user", user);
+			response.sendRedirect("index.jsp");
+		}
+		else {
+			response.getWriter().println("Sorry! Internal Error Occored");
+		}
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
