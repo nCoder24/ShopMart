@@ -1,8 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8" import="shopmart.models.User"%>
 <!DOCTYPE html>
 <html>
-
 <head>
    <!-- Basic -->
    <meta charset="utf-8" />
@@ -13,11 +12,7 @@
    <meta name="keywords" content="" />
    <meta name="description" content="" />
    <meta name="author" content="" />
-<<<<<<< HEAD
    <link rel="shortcut icon" href="images/logo.jpg" type="">
-=======
-   <link rel="shortcut icon" href="images/LOGONEW.jpg" type="">
->>>>>>> development
    <title>ShopMart</title>
    <!-- bootstrap core css -->
    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
@@ -30,16 +25,14 @@
 </head>
 
 <body>
+
+   <%User user = (User)session.getAttribute("user");%>
    <div class="hero_area">
       <!-- header section strats -->
       <header class="header_section">
          <div class="container">
             <nav class="navbar navbar-expand-lg custom_nav-container ">
-<<<<<<< HEAD
                <a class="navbar-brand" href="https://bpcit-shopmart.herokuapp.com"><img width="170" src="images/logo.jpg" alt="#" /></a>
-=======
-               <a class="navbar-brand" href="https://bpcit-shopmart.herokuapp.com"><img width="170" src="images/LOGONEW.jpg" alt="#" /></a>
->>>>>>> development
                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                   aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                   <span class=""> </span>
@@ -56,7 +49,11 @@
                         <a class="nav-link" href="blogs.jsp">Blog</a>
                      </li>
                      <li class="nav-item">
-                        <a class="nav-link" href="login.jsp">Login</a>
+                     <% 
+                     	if (user == null)
+                     		out.print("<a class='nav-link' href='login.jsp'>Login</a>"); 
+                     	else out.print("<a class='nav-link' href='logout'>Logout</a>");
+                     %>
                      </li>
                      <li class="nav-item">
                         <a class="nav-link" href="#">
@@ -67,7 +64,7 @@
                                  <g>
                                     <path
                                        d="M345.6,338.862c-29.184,0-53.248,23.552-53.248,53.248c0,29.184,23.552,53.248,53.248,53.248
-                                          c29.184,0,53.248-23.552,53.248-53.248C398.336,362.926,374.784,338.862,345.6,338.862z" />
+                                          c29.184,0,53.248-23.552,53.248-53.248C398.336,362.926,374.784,338.862,345.6,338.862z" >
                                  </g>
                               </g>
                               <g>
@@ -102,15 +99,18 @@
          </div>
       </header>
       <!-- end header section -->
-
+		<div class="heading_container heading_center">
+	       <h2>
+		       <%
+		       		if(user == null) out.println("Welcome!");
+		       		else out.println("Welcome back, "+user.getName()+"!");
+				%>
+	       </h2>
+	    </div>
       <!-- slider section -->
       <section class="slider_section ">
          <div class="slider_bg_box">
-<<<<<<< HEAD
             <img src="images/banner.jpeg" alt="">
-=======
-            <img src="images/Banner.jpeg" alt="">
->>>>>>> development
          </div>
          <div id="customCarousel1" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
@@ -342,11 +342,7 @@
       <div class="container">
          <div class="box">
             <div class="arrival_bg_box">
-<<<<<<< HEAD
                <img src="images/cover.jpeg" alt="">
-=======
-               <img src="images/cover2.jpeg" alt="">
->>>>>>> development
             </div>
             <div class="row">
                <div class="col-md-6 ml-auto">
@@ -378,17 +374,21 @@
             </h2>
          </div>
          <div class="row">
+         	<%for (int i = 101; i <=103; i++) { %>
             <div class="col-sm-6 col-md-4 col-lg-4">
                <div class="box">
                   <div class="option_container">
                      <div class="options">
+                     	<a href="product?pid=<%=i%>" class="option2">
+                              view
+                        </a>
                         <a href="payment.jsp" class="option2">
                            Buy Now
                         </a>
                      </div>
                   </div>
                   <div class="img-box">
-                     <img src="images/products/101.jpeg" alt="">
+                     <img src="images/products/<%=i%>.jpeg" alt="">
                   </div>
                   <div class="detail-box">
                      <h5>
@@ -400,64 +400,22 @@
                   </div>
                </div>
             </div>
-            <div class="col-sm-6 col-md-4 col-lg-4">
+            <% } %>
+            <%for (int i = 201; i <=203; i++) { %>
+			<div class="col-sm-6 col-md-4 col-lg-4">
                <div class="box">
                   <div class="option_container">
                      <div class="options">
-                        
+                        <a href="product?pid=<%=i%>" class="option2">
+                              view
+                           </a>
                         <a href="payment.jsp" class="option2">
                            Buy Now
                         </a>
                      </div>
                   </div>
                   <div class="img-box">
-                     <img src="images/products/102.jpeg" alt="">
-                  </div>
-                  <div class="detail-box">
-                     <h5>
-                        Men's Shirt
-                     </h5>
-                     <h6>
-                        RS. 800
-                     </h6>
-                  </div>
-               </div>
-            </div>
-            <div class="col-sm-6 col-md-4 col-lg-4">
-               <div class="box">
-                  <div class="option_container">
-                     <div class="options">
-                        
-                        <a href="payment.jsp" class="option2">
-                           Buy Now
-                        </a>
-                     </div>
-                  </div>
-                  <div class="img-box">
-                     <img src="images/products/103.jpeg" alt="">
-                  </div>
-                  <div class="detail-box">
-                     <h5>
-                        Men's T-Shirt
-                     </h5>
-                     <h6>
-                        RS. 500
-                     </h6>
-                  </div>
-               </div>
-            </div>
-            <div class="col-sm-6 col-md-4 col-lg-4">
-               <div class="box">
-                  <div class="option_container">
-                     <div class="options">
-                        
-                        <a href="payment.jsp" class="option2">
-                           Buy Now
-                        </a>
-                     </div>
-                  </div>
-                  <div class="img-box">
-                     <img src="images/products/201.jpeg" alt="">
+                     <img src="images/products/<%=i%>.jpeg" alt="">
                   </div>
                   <div class="detail-box">
                      <h5>
@@ -469,87 +427,22 @@
                   </div>
                </div>
             </div>
+            <% } %>
+            <%for (int i = 301; i <=303; i++) { %>
             <div class="col-sm-6 col-md-4 col-lg-4">
                <div class="box">
                   <div class="option_container">
                      <div class="options">
-                        
+                       <a href="product?pid=<%=i%>" class="option2">
+                              view
+                           </a>
                         <a href="payment.jsp" class="option2">
                            Buy Now
                         </a>
                      </div>
                   </div>
                   <div class="img-box">
-                     <img src="images/products/202.jpeg" alt="">
-                  </div>
-                  <div class="detail-box">
-                     <h5>
-                        Women's Dress
-                     </h5>
-                     <h6>
-                        RS. 1500
-                     </h6>
-                  </div>
-               </div>
-            </div>
-            <div class="col-sm-6 col-md-4 col-lg-4">
-               <div class="box">
-                  <div class="option_container">
-                     <div class="options">
-                        
-                        <a href="payment.jsp" class="option2">
-                           Buy Now
-                        </a>
-                     </div>
-                  </div>
-                  <div class="img-box">
-                     <img src="images/products/203.jpeg" alt="">
-                  </div>
-                  <div class="detail-box">
-                     <h5>
-                        Women's Dress
-                     </h5>
-                     <h6>
-                        RS. 900
-                     </h6>
-                  </div>
-               </div>
-            </div>
-            <div class="col-sm-6 col-md-4 col-lg-4">
-               <div class="box">
-                  <div class="option_container">
-                     <div class="options">
-                        
-                        <a href="payment.jsp" class="option2">
-                           Buy Now
-                        </a>
-                     </div>
-                  </div>
-                  <div class="img-box">
-                     <img src="images/products/301.jpeg" alt="">
-                  </div>
-                  <div class="detail-box">
-                     <h5>
-                        Kid's Dress
-                     </h5>
-                     <h6>
-                        RS. 400
-                     </h6>
-                  </div>
-               </div>
-            </div>
-            <div class="col-sm-6 col-md-4 col-lg-4">
-               <div class="box">
-                  <div class="option_container">
-                     <div class="options">
-                       
-                        <a href="payment.jsp" class="option2">
-                           Buy Now
-                        </a>
-                     </div>
-                  </div>
-                  <div class="img-box">
-                     <img src="images/products/302.jpeg" alt="">
+                     <img src="images/products/<%=i%>.jpeg" alt="">
                   </div>
                   <div class="detail-box">
                      <h5>
@@ -561,29 +454,7 @@
                   </div>
                </div>
             </div>
-            <div class="col-sm-6 col-md-4 col-lg-4">
-               <div class="box">
-                  <div class="option_container">
-                     <div class="options">
-                        
-                        <a href="payment.jsp" class="option2">
-                           Buy Now
-                        </a>
-                     </div>
-                  </div>
-                  <div class="img-box">
-                     <img src="images/products/303.jpeg" alt="">
-                  </div>
-                  <div class="detail-box">
-                     <h5>
-                        Kid's Dress
-                     </h5>
-                     <h6>
-                        RS. 900
-                     </h6>
-                  </div>
-               </div>
-            </div>
+            <% } %>
       </div>
    </section>
    <!-- end product section -->
@@ -594,11 +465,7 @@
             <div class="col-md-4">
                <div class="full">
                   <div class="logo_footer">
-<<<<<<< HEAD
                      <a href="#"><img width="170" src="images/logo.jpg" alt="#" /></a>
-=======
-                     <a href="#"><img width="170" src="images/LOGONEW.jpg" alt="#" /></a>
->>>>>>> development
                   </div>
                   <div class="information_f">
                      <p><strong>ADDRESS:</strong> 500 Local Road,Street 30, Kolkata</p>

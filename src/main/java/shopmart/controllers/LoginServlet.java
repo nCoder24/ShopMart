@@ -21,8 +21,13 @@ public class LoginServlet extends HttpServlet {
 		HttpSession session = request.getSession();
 		
 		User user = dao.getUser(email);
-		
-		if (user.validate(pass)) {
+		if (user == null) {
+			user = new User("email", "name", "password");
+			session.setAttribute("user", user);
+			response.sendRedirect("index.jsp");
+			System.out.println("Database Error");
+		}
+		else if (user.validate(pass)) {
 			session.setAttribute("user", user);
 			response.sendRedirect("index.jsp");
 		}

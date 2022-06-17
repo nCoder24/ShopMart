@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8" import="shopmart.models.User"%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,7 +14,14 @@
 </head>
 
 <body>
-
+	<%
+	User user = (User)session.getAttribute("user");
+	if(session.getAttribute("user") == null) {
+		request.setAttribute("msg", "Sorry! You are not logged in.");
+		//request.setAttribute("requestPath", request.getContextPath());
+		request.getRequestDispatcher("login.jsp").forward(request, response);
+	}
+	%>
     <div class="container">
 
         <form action="">

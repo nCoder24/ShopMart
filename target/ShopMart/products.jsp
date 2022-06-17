@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
    <head>
@@ -12,11 +11,7 @@
       <meta name="keywords" content="" />
       <meta name="description" content="" />
       <meta name="author" content="" />
-<<<<<<< HEAD:target/ShopMart/products.jsp
       <link rel="shortcut icon" href="images/logo.jpg" type="">
-=======
-      <link rel="shortcut icon" href="images/LOGONEW.jpg" type="">
->>>>>>> development:target/ShopMart/product.jsp
       <title>ShopMart</title>
       <!-- bootstrap core css -->
       <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
@@ -33,11 +28,7 @@
          <header class="header_section">
             <div class="container">
                <nav class="navbar navbar-expand-lg custom_nav-container ">
-<<<<<<< HEAD:target/ShopMart/products.jsp
                   <a class="navbar-brand" href="https://bpcit-shopmart.herokuapp.com"><img width="170" src="images/logo.jpg" alt="#" /></a>
-=======
-                  <a class="navbar-brand" href="https://bpcit-shopmart.herokuapp.com"><img width="170" src="images/LOGONEW.jpg" alt="#" /></a>
->>>>>>> development:target/ShopMart/product.jsp
                   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                   <span class=""> </span>
                   </button>
@@ -53,6 +44,13 @@
                         <li class="nav-item">
                            <a class="nav-link" href="blogs.jsp">Blog</a>
                         </li>
+                        <li class="nav-item">
+	                     <% 
+	                     	if (session.getAttribute("user") == null)
+	                     		out.print("<a class='nav-link' href='login.jsp'>Login</a>"); 
+	                     	else out.print("<a class='nav-link' href='logout'>Logout</a>");
+	                     %>
+	                     </li>
                         <li class="nav-item">
                            <a class="nav-link" href="#">
                               <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 456.029 456.029" style="enable-background:new 0 0 456.029 456.029;" xml:space="preserve">
@@ -114,26 +112,21 @@
                </h2>
             </div>
             <div class="row">
+               <%for (int i = 101; i <=107; i++) { %>
                <div class="col-sm-6 col-md-4 col-lg-3">
                   <div class="box">
                      <div class="option_container">
                         <div class="options">
-<<<<<<< HEAD:target/ShopMart/products.jsp
-                           <a href="view-product.jsp" class="option2">
+                           <a href="product?pid=<%=i%>" class="option2">
                               view
                            </a>
                            <a href="payment.jsp" class="option2">
                               Buy Now
-=======
-                           
-                           <a href="payment.jsp" class="option2">
-                           Buy Now
->>>>>>> development:target/ShopMart/product.jsp
                            </a>
                         </div>
                      </div>
                      <div class="img-box">
-                        <img src="images/products/104.jpeg" alt="">
+                        <img src="images/products/<%=i%>.jpeg" alt="">
                      </div>
                      <div class="detail-box">
                         <h5>
@@ -145,87 +138,22 @@
                      </div>
                   </div>
                </div>
+               <% }
+               for (int i = 201; i <=207; i++) { %>
                <div class="col-sm-6 col-md-4 col-lg-3">
                   <div class="box">
                      <div class="option_container">
                         <div class="options">
-                           
+                           <a href="product?pid=<%=i%>" class="option2">
+                              view
+                           </a>
                            <a href="payment.jsp" class="option2">
                            Buy Now
                            </a>
                         </div>
                      </div>
                      <div class="img-box">
-                        <img src="images/products/105.jpeg" alt="">
-                     </div>
-                     <div class="detail-box">
-                        <h5>
-                           Men's Shirt
-                        </h5>
-                        <h6>
-                          RS. 800
-                        </h6>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-sm-6 col-md-4 col-lg-3">
-                  <div class="box">
-                     <div class="option_container">
-                        <div class="options">
-                           
-                           <a href="payment.jsp" class="option2">
-                           Buy Now
-                           </a>
-                        </div>
-                     </div>
-                     <div class="img-box">
-                        <img src="images/products/106.jpeg" alt="">
-                     </div>
-                     <div class="detail-box">
-                        <h5>
-                           Men's T-Shirt
-                        </h5>
-                        <h6>
-                          RS. 500
-                        </h6>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-sm-6 col-md-4 col-lg-3">
-                  <div class="box">
-                     <div class="option_container">
-                        <div class="options">
-                           
-                           <a href="payment.jsp" class="option2">
-                           Buy Now
-                           </a>
-                        </div>
-                     </div>
-                     <div class="img-box">
-                        <img src="images/products/107.jpeg" alt="">
-                     </div>
-                     <div class="detail-box">
-                        <h5>
-                           Men's T-Shirt
-                        </h5>
-                        <h6>
-                           RS. 1100
-                        </h6>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-sm-6 col-md-4 col-lg-3">
-                  <div class="box">
-                     <div class="option_container">
-                        <div class="options">
-                           
-                           <a href="payment.jsp" class="option2">
-                           Buy Now
-                           </a>
-                        </div>
-                     </div>
-                     <div class="img-box">
-                        <img src="images/products/204.jpeg" alt="">
+                        <img src="images/products/<%=i%>.jpeg" alt="">
                      </div>
                      <div class="detail-box">
                         <h5>
@@ -237,87 +165,22 @@
                      </div>
                   </div>
                </div>
+               <% }
+               for (int i = 301; i <=307; i++) { %>
                <div class="col-sm-6 col-md-4 col-lg-3">
                   <div class="box">
                      <div class="option_container">
                         <div class="options">
-                           
+                           <a href="product?pid=<%=i%>" class="option2">
+                              view
+                           </a>
                            <a href="payment.jsp" class="option2">
                            Buy Now
                            </a>
                         </div>
                      </div>
                      <div class="img-box">
-                        <img src="images/products/205.jpeg" alt="">
-                     </div>
-                     <div class="detail-box">
-                        <h5>
-                           Women's Dress
-                        </h5>
-                        <h6>
-                           RS. 2500
-                        </h6>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-sm-6 col-md-4 col-lg-3">
-                  <div class="box">
-                     <div class="option_container">
-                        <div class="options">
-                           
-                           <a href="payment.jsp" class="option2">
-                           Buy Now
-                           </a>
-                        </div>
-                     </div>
-                     <div class="img-box">
-                        <img src="images/proudects/206.jpeg" alt="">
-                     </div>
-                     <div class="detail-box">
-                        <h5>
-                           Women's Dress
-                        </h5>
-                        <h6>
-                           RS. 800
-                        </h6>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-sm-6 col-md-4 col-lg-3">
-                  <div class="box">
-                     <div class="option_container">
-                        <div class="options">
-                           
-                           <a href="payment.jsp" class="option2">
-                           Buy Now
-                           </a>
-                        </div>
-                     </div>
-                     <div class="img-box">
-                        <img src="images/products/207.jpeg" alt="">
-                     </div>
-                     <div class="detail-box">
-                        <h5>
-                           Women's Dress
-                        </h5>
-                        <h6>
-                           RS. 1100
-                        </h6>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-sm-6 col-md-4 col-lg-3">
-                  <div class="box">
-                     <div class="option_container">
-                        <div class="options">
-                           
-                           <a href="payment.jsp" class="option2">
-                           Buy Now
-                           </a>
-                        </div>
-                     </div>
-                     <div class="img-box">
-                        <img src="images/products/304.jpeg" alt="">
+                        <img src="images/products/<%=i%>.jpeg" alt="">
                      </div>
                      <div class="detail-box">
                         <h5>
@@ -329,75 +192,7 @@
                      </div>
                   </div>
                </div>
-               <div class="col-sm-6 col-md-4 col-lg-3">
-                  <div class="box">
-                     <div class="option_container">
-                        <div class="options">
-                           
-                           <a href="payment.jsp" class="option2">
-                           Buy Now
-                           </a>
-                        </div>
-                     </div>
-                     <div class="img-box">
-                        <img src="images/products/305.jpeg" alt="">
-                     </div>
-                     <div class="detail-box">
-                        <h5>
-                           Kid's Dress
-                        </h5>
-                        <h6>
-                           RS. 400
-                        </h6>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-sm-6 col-md-4 col-lg-3">
-                  <div class="box">
-                     <div class="option_container">
-                        <div class="options">
-                          
-                           <a href="payment.jsp" class="option2">
-                           Buy Now
-                           </a>
-                        </div>
-                     </div>
-                     <div class="img-box">
-                        <img src="images/products/306.jpeg" alt="">
-                     </div>
-                     <div class="detail-box">
-                        <h5>
-                           Kid's Dress
-                        </h5>
-                        <h6>
-                           RS. 800
-                        </h6>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-sm-6 col-md-4 col-lg-3">
-                  <div class="box">
-                     <div class="option_container">
-                        <div class="options">
-                           
-                           <a href="payment.jsp" class="option2">
-                           Buy Now
-                           </a>
-                        </div>
-                     </div>
-                     <div class="img-box">
-                        <img src="images/products/307.jpeg" alt="">
-                     </div>
-                     <div class="detail-box">
-                        <h5>
-                           Kid's Dress
-                        </h5>
-                        <h6>
-                           RS. 900
-                        </h6>
-                     </div>
-                  </div>
-               </div>
+               <% } %>
             </div>
          </div>
       </section>
