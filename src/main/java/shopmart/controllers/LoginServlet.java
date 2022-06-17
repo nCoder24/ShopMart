@@ -1,6 +1,7 @@
 package shopmart.controllers;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -17,12 +18,17 @@ public class LoginServlet extends HttpServlet {
 		String email = request.getParameter("email");
 		String pass = request.getParameter("password");
 		
-		UserDao dao = new UserDao();
-		HttpSession session = request.getSession();
 		
-		User user = dao.getUser(email);
+		HttpSession session = request.getSession();
+		PrintWriter out = response.getWriter();
+		UserDao dao = new UserDao();
+		User user = new User();
+		
+		if (dao.connect()) user = dao.getUser(email);
+		else out.println("Database connection failed!");
+		
 		if (user == null) {
-			response.getWriter().println("Sorry! Internal Error Occored");
+			out.println("Sorry! Internal Error Occored");
 		}
 		else if (user.getEmail().equals("")){
 			request.setAttribute("msg", "Looks like you are not registered! Please try again by signing up yourself");
