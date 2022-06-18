@@ -90,7 +90,7 @@
                         </div>
                         <div class="inputBox">
                             <span>CVV :</span>
-                            <input type="text" placeholder="1234">
+                            <input type="text" placeholder="123">
                         </div>
                     </div>
 
@@ -98,9 +98,8 @@
 
             </div>
             <a href="thankyou.jsp">
-            <button class="text-uppercase">Proceed To Checkout</button> 
-            
-        </a>
+            	<button class="text-uppercase">Proceed To Checkout</button> 
+            </a>
         
         </form>
 

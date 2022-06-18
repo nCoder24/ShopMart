@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" 
-pageEncoding="UTF-8" import="shopmart.models.*"%>
+pageEncoding="UTF-8" import="shopmart.models.*, java.util.ArrayList, shopmart.dao.*"%>
 <!DOCTYPE html>
 <html>
    <head>
@@ -24,6 +24,10 @@ pageEncoding="UTF-8" import="shopmart.models.*"%>
       <link href="css/responsive.css" rel="stylesheet" />
    </head>
    <body class="sub_page">
+   	<%
+   		ProductDao dao = new ProductDao();
+    	ArrayList<Product> products;
+   	%>
       <div class="hero_area">
          <!-- header section strats -->
          <header class="header_section">
@@ -74,82 +78,81 @@ pageEncoding="UTF-8" import="shopmart.models.*"%>
                </h2>
             </div>
             <div class="row">
-               <%for (int i = 101; i <=107; i++) { %>
+               <%
+               products = dao.getProductsByCatagory("Men");
+               for (int i = 0; i <=3; i++) {
+               Product product = products.get(i);
+               %>
                <div class="col-sm-6 col-md-4 col-lg-3">
                   <div class="box">
                      <div class="option_container">
                         <div class="options">
-                           <a href="product?pid=<%=i%>" class="option2">
+                           <a href="product?productId=<%=product.getProductID()%>" class="option2">
                               view
-                           </a>
-                           <a href="payment.jsp" class="option2">
-                              Buy Now
                            </a>
                         </div>
                      </div>
                      <div class="img-box">
-                        <img src="images/products/<%=i%>.jpeg" alt="">
+                        <img src="images/products/<%=product.getProductID()%>.jpeg" alt="">
                      </div>
                      <div class="detail-box">
                         <h5>
-                           Men's Shirt
+                           <%=product.getCatagory()%>'s <%=product.getType()%>
+                        </h5>
+                        <h6>RS. <%=product.getPrice()%></h6>
+                     </div>
+                  </div>
+               </div>
+               <% }
+               products = dao.getProductsByCatagory("Women");
+               for (int i = 0; i <=3; i++) {
+               Product product = products.get(i);
+               %>
+               <div class="col-sm-6 col-md-4 col-lg-3">
+                  <div class="box">
+                     <div class="option_container">
+                        <div class="options">
+                           <a href="product?productId=<%=product.getProductID()%>" class="option2">
+                              view
+                           </a>
+                        </div>
+                     </div>
+                     <div class="img-box">
+                        <img src="images/products/<%=product.getProductID()%>.jpeg" alt="">
+                     </div>
+                     <div class="detail-box">
+                        <h5>
+                           <%=product.getCatagory()%>'s <%=product.getType()%>
                         </h5>
                         <h6>
-                           RS. 1500
+                           RS. <%=product.getPrice()%>
                         </h6>
                      </div>
                   </div>
                </div>
                <% }
-               for (int i = 201; i <=207; i++) { %>
+               products = dao.getProductsByCatagory("Kid");
+               for (int i = 0; i <=3; i++) {
+               Product product = products.get(i);
+               %>
                <div class="col-sm-6 col-md-4 col-lg-3">
                   <div class="box">
                      <div class="option_container">
                         <div class="options">
-                           <a href="product?pid=<%=i%>" class="option2">
+                           <a href="product?productId=<%=product.getProductID()%>" class="option2">
                               view
-                           </a>
-                           <a href="payment.jsp" class="option2">
-                           Buy Now
                            </a>
                         </div>
                      </div>
                      <div class="img-box">
-                        <img src="images/products/<%=i%>.jpeg" alt="">
+                        <img src="images/products/<%=product.getProductID()%>.jpeg" alt="">
                      </div>
                      <div class="detail-box">
                         <h5>
-                           Women's Dress
+                           <%=product.getCatagory()%>'s <%=product.getType()%>
                         </h5>
                         <h6>
-                           RS. 6000
-                        </h6>
-                     </div>
-                  </div>
-               </div>
-               <% }
-               for (int i = 301; i <=307; i++) { %>
-               <div class="col-sm-6 col-md-4 col-lg-3">
-                  <div class="box">
-                     <div class="option_container">
-                        <div class="options">
-                           <a href="product?pid=<%=i%>" class="option2">
-                              view
-                           </a>
-                           <a href="payment.jsp" class="option2">
-                           Buy Now
-                           </a>
-                        </div>
-                     </div>
-                     <div class="img-box">
-                        <img src="images/products/<%=i%>.jpeg" alt="">
-                     </div>
-                     <div class="detail-box">
-                        <h5>
-                           Kid's Dress
-                        </h5>
-                        <h6>
-                           RS. 600
+                           RS. <%=product.getPrice()%>
                         </h6>
                      </div>
                   </div>

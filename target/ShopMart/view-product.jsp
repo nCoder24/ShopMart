@@ -49,13 +49,6 @@
                         <li class="nav-item">
                            <a class="nav-link" href="blogs.jsp">Blog</a>
                         </li>
-                        <li class="nav-item">
-	                     <% 
-	                     	if (session.getAttribute("user") == null)
-	                     		out.print("<a class='nav-link' href='login.jsp'>Login</a>"); 
-	                     	else out.print("<a class='nav-link' href='logout'>Logout</a>");
-	                     %>
-	                     </li>
                      </ul>
                   </div>
                </nav>
@@ -89,7 +82,9 @@
                 <br>
                 <h4><%=product.getType()%></h4>
                 <br><br>
-                <h3><%=product.getTitle()%></h3>
+                <h3>
+                	<%=product.getCatagory()%>'s <%=product.getType()%>
+                </h3>
                 <br>
                 <p id="price">Rs. <%=product.getPrice()%></p>
                 <br>
