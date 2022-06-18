@@ -345,7 +345,7 @@
          <div class="row">
          	   <%
 	               products = dao.getProductsByCatagory("Men");
-	               for (int i = 0; i < products.size(); i++) {
+	               for (int i = 0; i < 3; i++) {
 	               Product product = products.get(i);
                %>
                <div class="col-sm-6 col-md-4 col-lg-3">
@@ -370,7 +370,7 @@
                </div>
                <% }
                products = dao.getProductsByCatagory("Women");
-               for (int i = 0; i < products.size(); i++) {
+               for (int i = 0; i < 3; i++) {
                Product product = products.get(i);
                %>
                <div class="col-sm-6 col-md-4 col-lg-3">
@@ -397,7 +397,7 @@
                </div>
                <% }
                products = dao.getProductsByCatagory("Kid");
-               for (int i = 0; i < products.size(); i++) {
+               for (int i = 0; i < 3; i++) {
                Product product = products.get(i);
                %>
                <div class="col-sm-6 col-md-4 col-lg-3">
