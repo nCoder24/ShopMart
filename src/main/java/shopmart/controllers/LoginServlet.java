@@ -24,8 +24,7 @@ public class LoginServlet extends HttpServlet {
 		UserDao dao = new UserDao();
 		User user = new User();
 		
-		if (dao.connect()) user = dao.getUser(email);
-		else out.println("Database connection failed!");
+		user = dao.getUser(email);
 		
 		if (user == null) {
 			out.println("Sorry! Internal Error Occored");

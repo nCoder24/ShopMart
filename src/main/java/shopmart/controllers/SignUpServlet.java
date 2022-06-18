@@ -18,8 +18,6 @@ public class SignUpServlet extends HttpServlet {
 		PrintWriter out = response.getWriter();
 		UserDao dao = new UserDao();
 		
-		if (!dao.connect()) out.println("Database connection failed!");
-		
 		if (dao.registerUser(user)) {
 			request.getSession().setAttribute("user", user);
 			response.sendRedirect("index.jsp");
