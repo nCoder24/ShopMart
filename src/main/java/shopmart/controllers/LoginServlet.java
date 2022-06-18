@@ -23,24 +23,25 @@ public class LoginServlet extends HttpServlet {
 		PrintWriter out = response.getWriter();
 		UserDao dao = new UserDao();
 		User user = new User();
-		
-		user = dao.getUser(email);
-		
-		if (user == null) {
-			out.println("Sorry! Internal Error Occored");
-		}
-		else if (user.getEmail().equals("")){
-			request.setAttribute("msg", "Looks like you are not registered! Please try again by signing up yourself");
-			request.getRequestDispatcher("login.jsp").forward(request, response);
-		}
-		else if (user.validate(pass)) {
-			session.setAttribute("user", user);
-			response.sendRedirect("index.jsp");
-		}
-		else {
-			request.setAttribute("msg", "Email or password error! Please try again");
-			request.getRequestDispatcher("login.jsp").forward(request, response);
-		}
+		try {
+			user = dao.getUser(email);
+			
+			if (user == null) {
+				out.println("Sorry! Internal Error Occored");
+			}
+			else if (user.getEmail().equals("")){
+				request.setAttribute("msg", "Looks like you are not registered! Please try again by signing up yourself");
+				request.getRequestDispatcher("login.jsp").forward(request, response);
+			}
+			else if (user.validate(pass)) {
+				session.setAttribute("user", user);
+				response.sendRedirect("index.jsp");
+			}
+			else {
+				request.setAttribute("msg", "Email or password error! Please try again");
+				request.getRequestDispatcher("login.jsp").forward(request, response);
+			}
+		} catch(Exception e) {out.print(e);}
 	}
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		doPost(request, response);
