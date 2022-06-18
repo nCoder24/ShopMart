@@ -1,15 +1,55 @@
 package shopmart.dao;
 
 import shopmart.models.Product;
+import java.sql.*;
+import java.util.ArrayList;
 
 public class ProductDao {
-	public Product getProduct(int pid) {
-		/*
-		 * This is written just for testing...
-		 * Overwrite this and fetch data from the database (Achyut)
-		 */
-		Product product = new Product(pid, 101, "Man's Fashion T-shirt", "T-Shirt", "Men", "description");
-		product.setDescription("Shop from wide range of Round Neck half sleeve T-Shirt from BLIVE. Pair this t -shirt with jeans or chinos, trousers and get an awesome look. It is regular machine wash. This fabric is soft in touch and it makes feel so comfort when you wear. The fabric does not pill and the color will not fade easily. Available in various color and designs for your every day fashion. Fill your wardrobe with the most wanted brand in online world and be stylish most beautiful collections from the house of BLIVE.");
+	public Product getProduct(int pid) 
+	{
+		Product product = new Product();
+		try{
+			Connection connection = new Connectivity().connect(); 
+			String query = "SELECT * FROM product WHERE productid='" + pid + "';";
+	        Statement statement = connection.createStatement();
+	        ResultSet result = statement.executeQuery(query);
+	        
+	        if (result.next()) {
+	        	product.setProductID(result.getInt("productId" ));
+				product.setPrice(result.getInt("price"));
+				product.setType(result.getString("pType"));
+				product.setCatagory(result.getString("pCatagory"));
+				product.setDescription(result.getString("pDescription"));
+			
+	        }
+		} catch (Exception e) {return null;}
 		return product;
-	}
+ 	}
+	public ArrayList<Product> getProductsByCatagory (String catagory)
+	{
+	
+		ArrayList<Product> products =new ArrayList<Product>();
+		try{
+			Connection connection = new Connectivity().connect(); 
+			String query = "SELECT * FROM product WHERE pCatagory = '" +catagory + "';";
+			Statement statement = connection.createStatement();
+			ResultSet result = statement.executeQuery(query);
+			while(result.next())
+			{
+				Product product = new Product();
+	         if (result.next())
+			  {
+	        	product.setProductID(result.getInt("productId" ));
+				product.setPrice(result.getInt("price"));
+				product.setType(result.getString("pType"));
+				product.setCatagory(result.getString("pCatagory"));
+				product.setDescription(result.getString("pDescription"));
+			
+	          } 
+				products.add(product);
+			}
+		}catch (Exception e) {return null;}
+		return products;
+	} 
+	
 }

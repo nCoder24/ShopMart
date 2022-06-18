@@ -3,15 +3,19 @@ package shopmart.models;
 public class Product {
 	private int productID;
 	private int price;
-	private String title;
 	private String type;
 	private String catagory;
 	private String description;
-	public Product(int productID, int price, String title, String type, String catagory, String description) {
-		super();
+	public Product(){
+		productID = 0;
+		price=0;
+		type ="";
+		catagory ="";
+		description="";
+	}
+	public Product(int productID, int price, String type, String catagory, String description) {
 		this.productID = productID;
 		this.price = price;
-		this.title = title;
 		this.type = type;
 		this.catagory = catagory;
 		this.description = description;
@@ -21,12 +25,6 @@ public class Product {
 	}
 	public void setProductID(int productID) {
 		this.productID = productID;
-	}
-	public String getTitle() {
-		return title;
-	}
-	public void setTitle(String title) {
-		this.title = title;
 	}
 	public int getPrice() {
 		return price;
@@ -54,7 +52,7 @@ public class Product {
 	}
 	@Override
 	public String toString() {
-		return "Product [productID=" + productID + ", price=" + price + ", title=" + title + ", description="
+		return "Product [productID=" + productID + ", price=" + price + ", description="
 				+ description + "]";
 	}
 }
