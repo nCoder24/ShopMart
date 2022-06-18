@@ -25,11 +25,7 @@ public class LoginServlet extends HttpServlet {
 		User user = new User();
 		try {
 			user = dao.getUser(email);
-			
-			if (user == null) {
-				out.println("Sorry! Internal Error Occored");
-			}
-			else if (user.getEmail().equals("")){
+			if (user.getEmail().equals("")){
 				request.setAttribute("msg", "Looks like you are not registered! Please try again by signing up yourself");
 				request.getRequestDispatcher("login.jsp").forward(request, response);
 			}
