@@ -18,7 +18,7 @@
             <img  id="photo" src="images/tick.png">
             <h1 id="text"> Order Placed Successfully! </h1>
             <p id="text2"> Thank you for being a great customer! </p>
-            <button href="index.jsp" id="home">Home</button>
+            <a href="index.jsp"><button type="button" id="home">Home</button></a>
     </div>
 </body>
 </html>

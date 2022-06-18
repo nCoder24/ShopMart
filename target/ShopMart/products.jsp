@@ -26,7 +26,10 @@ pageEncoding="UTF-8" import="shopmart.models.*, java.util.ArrayList, shopmart.da
    <body class="sub_page">
    	<%
    		ProductDao dao = new ProductDao();
-    	ArrayList<Product> products;
+	   	ArrayList<Product> products = new ArrayList<Product>();
+	   	for (int i = 3; i < 7; i++) products.add(dao.getProductsByCatagory("Men").get(i));
+	   	for (int i = 3; i < 7; i++) products.add(dao.getProductsByCatagory("Women").get(i));
+	   	for (int i = 3; i < 7; i++) products.add(dao.getProductsByCatagory("Kid").get(i));
    	%>
       <div class="hero_area">
          <!-- header section strats -->
@@ -79,8 +82,7 @@ pageEncoding="UTF-8" import="shopmart.models.*, java.util.ArrayList, shopmart.da
             </div>
             <div class="row">
                <%
-               products = dao.getProductsByCatagory("Men");
-               for (int i = 0; i <=3; i++) {
+               for (int i = 0; i < products.size(); i++) {
                Product product = products.get(i);
                %>
                <div class="col-sm-6 col-md-4 col-lg-3">
@@ -100,60 +102,6 @@ pageEncoding="UTF-8" import="shopmart.models.*, java.util.ArrayList, shopmart.da
                            <%=product.getCatagory()%>'s <%=product.getType()%>
                         </h5>
                         <h6>RS. <%=product.getPrice()%></h6>
-                     </div>
-                  </div>
-               </div>
-               <% }
-               products = dao.getProductsByCatagory("Women");
-               for (int i = 0; i <=3; i++) {
-               Product product = products.get(i);
-               %>
-               <div class="col-sm-6 col-md-4 col-lg-3">
-                  <div class="box">
-                     <div class="option_container">
-                        <div class="options">
-                           <a href="product?productId=<%=product.getProductID()%>" class="option2">
-                              view
-                           </a>
-                        </div>
-                     </div>
-                     <div class="img-box">
-                        <img src="images/products/<%=product.getProductID()%>.jpeg" alt="">
-                     </div>
-                     <div class="detail-box">
-                        <h5>
-                           <%=product.getCatagory()%>'s <%=product.getType()%>
-                        </h5>
-                        <h6>
-                           RS. <%=product.getPrice()%>
-                        </h6>
-                     </div>
-                  </div>
-               </div>
-               <% }
-               products = dao.getProductsByCatagory("Kid");
-               for (int i = 0; i <=3; i++) {
-               Product product = products.get(i);
-               %>
-               <div class="col-sm-6 col-md-4 col-lg-3">
-                  <div class="box">
-                     <div class="option_container">
-                        <div class="options">
-                           <a href="product?productId=<%=product.getProductID()%>" class="option2">
-                              view
-                           </a>
-                        </div>
-                     </div>
-                     <div class="img-box">
-                        <img src="images/products/<%=product.getProductID()%>.jpeg" alt="">
-                     </div>
-                     <div class="detail-box">
-                        <h5>
-                           <%=product.getCatagory()%>'s <%=product.getType()%>
-                        </h5>
-                        <h6>
-                           RS. <%=product.getPrice()%>
-                        </h6>
                      </div>
                   </div>
                </div>

@@ -98,9 +98,8 @@
 
             </div>
             <a href="thankyou.jsp">
-            	<button class="text-uppercase">Proceed To Checkout</button> 
+            	<button type="button" class="text-uppercase">Proceed To Checkout</button> 
             </a>
-        
         </form>
 
     </div>
