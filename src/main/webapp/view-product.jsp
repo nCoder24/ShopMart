@@ -82,7 +82,9 @@
                 <br>
                 <h4><%=product.getType()%></h4>
                 <br><br>
-                <h3><%=product.getTitle()%></h3>
+                <h3>
+                	<%=product.getCatagory()%>'s <%=product.getType()%>
+                </h3>
                 <br>
                 <p id="price">Rs. <%=product.getPrice()%></p>
                 <br>

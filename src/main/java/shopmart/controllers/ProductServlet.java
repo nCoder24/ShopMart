@@ -13,7 +13,7 @@ import shopmart.models.Product;
 public class ProductServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		int pid = Integer.parseInt(request.getParameter("pid"));
+		int pid = Integer.parseInt(request.getParameter("productId"));
 		
 		ProductDao dao = new ProductDao();
 		Product product = dao.getProduct(pid);

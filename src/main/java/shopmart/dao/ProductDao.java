@@ -5,8 +5,7 @@ import java.sql.*;
 import java.util.ArrayList;
 
 public class ProductDao {
-	public Product getProduct(int pid) 
-	{
+	public Product getProduct(int pid) {
 		Product product = new Product();
 		try{
 			Connection connection = new Connectivity().connect(); 
@@ -25,8 +24,7 @@ public class ProductDao {
 		} catch (Exception e) {return null;}
 		return product;
  	}
-	public ArrayList<Product> getProductsByCatagory (String catagory)
-	{
+	public ArrayList<Product> getProductsByCatagory (String catagory) {
 	
 		ArrayList<Product> products =new ArrayList<Product>();
 		try{
