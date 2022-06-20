@@ -27,9 +27,9 @@ pageEncoding="UTF-8" import="shopmart.models.*, java.util.ArrayList, shopmart.da
    	<%
    		ProductDao dao = new ProductDao();
 	   	ArrayList<Product> products = new ArrayList<Product>();
-	   	for (int i = 3; i < 7; i++) products.add(dao.getProductsByCatagory("Men").get(i));
-	   	for (int i = 3; i < 7; i++) products.add(dao.getProductsByCatagory("Women").get(i));
-	   	for (int i = 3; i < 7; i++) products.add(dao.getProductsByCatagory("Kid").get(i));
+    	products.addAll(dao.getProductsByCatagory("Men").subList(3, 7));
+    	products.addAll(dao.getProductsByCatagory("Women").subList(3, 7));
+    	products.addAll(dao.getProductsByCatagory("Kid").subList(3, 7));
    	%>
       <div class="hero_area">
          <!-- header section strats -->

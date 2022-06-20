@@ -30,9 +30,9 @@
    		User user = (User)session.getAttribute("user");
    		ProductDao dao = new ProductDao();
     	ArrayList<Product> products = new ArrayList<Product>();
-    	for (int i = 0; i < 3; i++) products.add(dao.getProductsByCatagory("Men").get(i));
-    	for (int i = 0; i < 3; i++) products.add(dao.getProductsByCatagory("Women").get(i));
-    	for (int i = 0; i < 3; i++) products.add(dao.getProductsByCatagory("Kid").get(i));
+    	products.addAll(dao.getProductsByCatagory("Men").subList(0, 3));
+    	products.addAll(dao.getProductsByCatagory("Women").subList(0, 3));
+    	products.addAll(dao.getProductsByCatagory("Kid").subList(0, 3));
    	%>
    <div class="hero_area">
       <!-- header section strats -->
