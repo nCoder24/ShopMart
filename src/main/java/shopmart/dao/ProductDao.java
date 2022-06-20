@@ -30,15 +30,11 @@ public class ProductDao {
 		while(result.next())
 		{
 			Product product = new Product();
-			if (result.next())
-			{
 			product.setProductID(result.getInt("productId" ));
 			product.setPrice(result.getInt("price"));
 			product.setType(result.getString("pType"));
 			product.setCatagory(result.getString("pCatagory"));
 			product.setDescription(result.getString("pDescription"));
-		
-			} 
 			products.add(product);
 		}
 		return products;
